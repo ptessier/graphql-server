@@ -12,12 +12,20 @@ export class ConfigProvider {
     return this.get('secret');
   }
 
-  serverOptions(): Options {
-    return this.get('graphql');
+  options(): Options {
+    return this.get('options');
   }
 
-  private get(keyPath: string): any {
-    return this.nconf.get(keyPath);
+  isProduction() {
+    return process.env.NODE_ENV === 'production';
+  }
+
+  isDevelopment() {
+    return process.env.NODE_ENV !== 'production';
+  }
+
+  private get(keyPath: string, defaultValue?: any): any {
+    return this.nconf.get(keyPath) || defaultValue;
   }
 }
 

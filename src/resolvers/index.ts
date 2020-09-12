@@ -4,4 +4,6 @@ export const resolvers = {
   Query: {
     version,
   },
+  // Mutation: {},
+  // Subscription: {},
 };

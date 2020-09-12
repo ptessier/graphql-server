@@ -5,8 +5,8 @@ import { Viewer } from '~/context/viewer';
 import { JwtTokens } from '~/helper/jwt-tokens';
 import { log } from '~/logger';
 
-export const authorize = (context: ContextParameters): Viewer => {
-  const { request, connection } = context;
+export const authorize = (parameters: ContextParameters): Viewer => {
+  const { request, connection } = parameters;
 
   if (request) return authorizeRequest(request);
 

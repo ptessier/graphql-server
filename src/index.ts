@@ -1,12 +1,12 @@
 import { config } from '~/config';
-import { createContext } from '~/context/create-context';
+import { context } from '~/context/create-context';
 import { createServer } from '~/create-server';
 import { log } from '~/logger';
 import { resolvers } from '~/resolvers';
 import { typeDefs } from '~/typeDefs';
 
 const server = createServer({
-  context: createContext,
+  context,
   typeDefs,
   resolvers,
 });
@@ -17,12 +17,12 @@ log.info('Starting server.', options);
 
 options.subscriptions = {
   onConnect: (connectionParams, _webSocket, _context) => {
-    log.info('ws connected');
+    log.info('webSocket connected', connectionParams);
 
     return connectionParams;
   },
   onDisconnect: (_webSocket, _context) => {
-    log.info('ws disconnected');
+    log.info('webSocket disconnected');
   },
 };
 

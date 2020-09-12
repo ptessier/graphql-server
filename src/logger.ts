@@ -1,10 +1,10 @@
 import pino from 'pino';
-import { isProduction } from '~/helper/environment';
+import { config } from '~/config';
 
 export const log = pino({ level: process.env.LOG_LEVEL || inferDefaultLogLevel() });
 
 function inferDefaultLogLevel() {
-  if (isProduction) {
+  if (config.isProduction()) {
     return 'info';
   }
 
