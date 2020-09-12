@@ -1,0 +1,7 @@
+{
+  "secret": "a_secret_not_secret_for_development",
+  "options": {
+    "port": 5000,
+    "playground": "/playground"
+  }
+}

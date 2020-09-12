@@ -1,0 +1,19 @@
+# build
+dist/
+build/
+
+# coverage
+coverage/
+
+## git
+.git
+
+## prettier
+.prettierignore
+
+## generated
+*/generated/**
+
+## yarn
+node_modules/
+yarn.lock

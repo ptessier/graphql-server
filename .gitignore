@@ -1,0 +1,15 @@
+\.env
+
+# coverage
+coverage
+
+# build
+dist
+
+# yarn
+node_modules
+
+# system files
+*.orig
+.DS_Store
+Thumbs.db
