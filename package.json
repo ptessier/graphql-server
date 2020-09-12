@@ -15,6 +15,7 @@
     "@graphql-tools/load-files": "^6.2.0",
     "@graphql-tools/merge": "^6.2.0",
     "@graphql-tools/schema": "^6.2.0",
+    "@prisma/client": "2.6.2",
     "apollo-errors": "^1.9.0",
     "apollo-resolvers": "^1.4.2",
     "bcryptjs": "^2.4.3",
@@ -29,6 +30,7 @@
     "validator": "^13.1.1"
   },
   "devDependencies": {
+    "@prisma/cli": "2.6.2",
     "@types/bcryptjs": "^2.4.2",
     "@types/compression": "^1.7.0",
     "@types/express-pino-logger": "^4.0.2",

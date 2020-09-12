@@ -6,6 +6,9 @@ coverage
 # build
 dist
 
+# database
+database/data/
+
 # yarn
 node_modules
 

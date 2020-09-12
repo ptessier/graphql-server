@@ -61,6 +61,18 @@ Finally, update the schema in `database/init`.
 ## Docker
 
 ```sh
-# dump a postgres docker container
-docker exec [container-name] pg_dump -U postgres --schema-only --no-owner [db-name] > database/init/schema.sql
+# start the application
+docker-compose up -d
+
+# remove the application
+docker-compose rm -s -f
+
+# dump the schema
+docker exec graphql-server_pg_1 pg_dump -U postgres --no-privileges --schema-only --no-owner prisma > database/init/schema.sql
+
+# dump the data
+docker exec graphql-server_pg_1 pg_dump -U postgres --data-only --no-owner prisma > database/init/data.sql
+
+# delete the database data
+rm -rf database/data
 ```
