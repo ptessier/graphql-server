@@ -24,6 +24,11 @@ yarn start
 
 ## Prisma
 
+```sh
+# database url
+postgresql://USER:PASSWORD@HOST:PORT/DATABASE
+```
+
 ### Introspection
 
 Update the database and the related files in `database/init` folder,
@@ -63,6 +68,9 @@ Finally, update the schema in `database/init`.
 ```sh
 # start the application
 docker-compose up -d
+
+# list application
+docker-compose ps
 
 # remove the application
 docker-compose rm -s -f
